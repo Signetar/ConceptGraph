@@ -32,3 +32,9 @@ graph.remove_link("Student", "Apple")
 # print the current state of the graph
 print(graph)
 ```
+```
+	Student	Apple	Pencil
+Student	-	-	Uses
+Apple	Eaten By	-	-
+Pencil	-	-	-
+```
