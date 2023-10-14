@@ -22,7 +22,7 @@ class ConceptGraph:
         for row in self.matrix:
             row.append(None)
 
-        # add a new row for the new concept
+        # add a new row for the new coincept
         self.matrix.append([None] * len(self.concepts))
 
     def remove_concept(self, concept_name):
@@ -44,7 +44,7 @@ class ConceptGraph:
         index = self.concepts.index(prev_concept)
         self.concepts[index] = new
 
-    def add_link(self, concept1, concept2, link):
+    def add_link(self, concept1, link, concept2):
         if concept1 not in self.concepts or concept2 not in self.concepts:
             raise ValueError("Both concepts should exist before adding a link.")
         index1 = self.concepts.index(concept1)
@@ -58,7 +58,7 @@ class ConceptGraph:
         index2 = self.concepts.index(concept2)
         self.matrix[index1][index2] = None
 
-    def modify_link(self, concept1, concept2, new_link):
+    def modify_link(self, concept1, new_link, concept2):
         if concept1 not in self.concepts or concept2 not in self.concepts:
             raise ValueError("Both concepts should exist before modifying a link.")
         if self.matrix[self.concepts.index(concept1)][self.concepts.index(concept2)] is None:
