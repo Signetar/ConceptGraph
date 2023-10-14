@@ -6,9 +6,9 @@ ConceptGraph could be used using these methods:
 - **`add_concept(concept: str)`**: Adds a new concept to the graph.
 - **`remove_concept(concept_name: str)`**: Removes an existing concept from the graph.
 - **`modify_concept(prev_concept: str, new: str)`**: Modifies the name of an existing concept.
-- **`add_link(concept1: str, concept2: str, link: str)`**: Creates a link between two concepts.
+- **`add_link(concept1: str, link: str, concept2: str)`**: Creates a link between two concepts.
 - **`remove_link(concept1: str, concept2: str)`**: Removes the link between two concepts.
-- **`modify_link(concept1: str, concept2: str, new_link: str)`**: Modifies the link between two concepts.
+- **`modify_link(concept1: str, new_link: str, concept2: str)`**: Modifies the link between two concepts.
 
 ## Example Usage
 ```py
